@@ -1,0 +1,51 @@
+export default {
+  "navbar.home": "Home",
+  "navbar.about": "About Us",
+  "navbar.service": "Services",
+  "navbar.nettoyage": "Sanitary Cleaning",
+  "navbar.contact": "Contact",
+  "navbar.devis": "Request a Quote",
+
+  "contact.header": "Contact",
+  "contact.us": "us",
+  "contact.text": "Request a free quote or ask us any questions. Our team will respond within 24 hours.",
+  "contact.devis": "Request a quote",
+  "contact.name": "Full name *",
+  "contact.whatsapp": "WhatsApp *",
+  "contact.entreprise": "Company",
+  "contact.ville": "City *",
+  "contact.service": "Service requested",
+  "contact.email": "Email",
+  "contact.message": "Message",
+ "contact.send":"Send the quote",
+  "contact.describe":"Describe your need...",
+  "contact.cordone": "Contact Information",
+"contact.address": "Address",
+"contact.phone": "Phone",
+"contact.hours": "Business Hours",
+"contact.whatsapp1": "Chat on WhatsApp",
+"contact.date": "Mon - Fri: 7:00 AM - 6:00 PM",
+"contact.date1": "Sat: 8:00 AM - 2:00 PM",
+
+  "footer.div1text":
+    "Your trusted partner for hygiene, sanitation, and QHSE services in Cameroon. We ensure clean, healthy, and internationally compliant environments.",
+
+  "footer.services": "Services",
+  "footer.sanitary": "Sanitary Cleaning",
+  "footer.hygiene": "Hygiene & Sanitation",
+  "footer.traitement": "Pest Control Treatment",
+  "footer.netoyage": "Industrial Cleaning",
+  "footer.entretien": "Green Space Maintenance",
+  "footer.piscine": "Swimming Pool Maintenance",
+  "footer.qhse": "QHSE Training",
+
+  "footer.blog": "Blog & Tips",
+  "footer.faq": "FAQ",
+  "footer.realisation": "Projects",
+  "footer.about": "About Us",
+  "footer.contact": "Contact",
+
+  "footer.resource": "Resources",
+  "footer.email": "Your email",
+  "footer.copyright": "© 2026 CHS. All Rights Reserved."
+} as const;
