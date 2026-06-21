@@ -27,13 +27,13 @@
 }
 @layer components{
   .btn{
-    @apply bg-violet rounded-2xl p-3 transform hover:scale-105 transition-transform duration-300 text-white font-medium text-[14px] leading-4
+    @apply bg-violet text-[16px] text-nowrap rounded-2xl p-3 transform hover:scale-105 transition-transform duration-300 text-white font-medium text-[14px] leading-4
   }
   .text{
     @apply text-[14px] font-normal leading-5 font-base
   }
   .btn-devis{
-     @apply bg-blue rounded-2xl px-4 py-2 transform hover:scale-105 transition-transform duration-300 text-white font-medium  text-[14px] leading-4
+     @apply bg-blue text-[16px] text-nowrap rounded-2xl px-4 py-2 transform hover:scale-105 transition-transform duration-300 text-white font-medium  text-[14px] leading-4
   }
   .input{
     @apply rounded-2xl px-4 py-1 bg-blue-500/20 w-full outline-none
