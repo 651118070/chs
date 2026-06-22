@@ -357,7 +357,7 @@ export default function Sanitary() {
       <section data-aos='slide-left' className="m-2 bg-blue max-w-6xl md:mx-auto flex flex-col gap-2 p-3 max-md:p-2 rounded-2xl items-center justify-center text-white">
         <h2 className="md:text-4xl text-2xl font-header font-extrabold leading-10 tracking-tight text-center">{t('netoyage.pret')}</h2>
         <div className="flex gap-5 p-6 max-md:flex-col">
-          <button className='flex btn-devis bg-violet  gap-2 items-center'>
+          <button className='flex btn-devis bg-violet  gap-2 justify-center text-center items-center'>
             <Link href={`/${locale}/contact`}>{t('netoyage.devisgratuit')}</Link>
             <ArrowRight />
           </button>
