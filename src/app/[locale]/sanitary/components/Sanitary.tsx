@@ -41,7 +41,7 @@ export default function Sanitary() {
           <div className="flex flex-col gap-5 justify-center max-md:items-center">
             <h1 className="max-md:text-center">{t("netoyage.sanitaire")}</h1>
             <p className="md:text-[18px] max-md:text-center">{t("netoyage.ntext")}</p>
-            <div className="flex gap-5 p-6">
+            <div className="flex gap-5 p-6 max-md:flex-col">
               <button className='flex btn-devis bg-violet  gap-2 items-center'>
                 <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
                 <ArrowRight />
@@ -342,9 +342,9 @@ export default function Sanitary() {
           </div>
         </div>
       </section>
-      <section className="mb-3 bg-blue max-w-6xl mx-auto flex flex-col gap-2 p-6 rounded-2xl items-center justify-center text-white">
-        <h2 className="md:text-4xl text-2xl font-header font-extrabold leading-10 tracking-tight ">{t('netoyage.pret')}</h2>
-        <div className="flex gap-5 p-6">
+      <section className="m-2 bg-blue max-w-6xl md:mx-auto flex flex-col gap-2 p-3 max-md:p-2 rounded-2xl items-center justify-center text-white">
+        <h2 className="md:text-4xl text-2xl font-header font-extrabold leading-10 tracking-tight text-center">{t('netoyage.pret')}</h2>
+        <div className="flex gap-5 p-6 max-md:flex-col">
           <button className='flex btn-devis bg-violet  gap-2 items-center'>
             <Link href={`/${locale}/contact`}>{t('netoyage.devisgratuit')}</Link>
             <ArrowRight />
