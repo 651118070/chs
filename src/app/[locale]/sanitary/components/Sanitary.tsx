@@ -239,7 +239,8 @@ export default function Sanitary() {
           </div>
           <div data-aos="zoom-in" className="grid grid-cols-2 rounded-2xl">
             <Image src={man} alt="cleaning image " className="object-cover rounded-tl-2xl" />
-           <Image src={group1} alt="cleaning image" className="object-cover justify-self-center rounded-bl-2xl" />
+            <Image src={group} alt="cleaning image " className="object-cover rounded-tr-2xl" />
+           <Image src={group1} alt="cleaning image" className="object-cover justify-self-center rounded-brok-2xl" />
            <Image src={walk} alt="cleaning image" className="object-cover justify-self-center rounded-bl-2xl" />
           </div>
 
