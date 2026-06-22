@@ -36,7 +36,7 @@ export default function Sanitary() {
   const locale = params?.locale || "fr";
   return (
     <main>
-      <section className='bg-blue20'>
+      <section data-aos='slide-up' className='bg-blue20'>
         <div className='max-w-6xl mx-auto gap-5 p-6'>
           <div className="flex flex-col gap-5 justify-center max-md:items-center">
             <h1 className="max-md:text-center">{t("netoyage.sanitaire")}</h1>
@@ -54,7 +54,7 @@ export default function Sanitary() {
           </div>
         </div>
       </section>
-      <section>
+      <section data-aos='slide-up'>
         <div className="max-w-6xl mx-auto p-6 gap-5">
           <div className="flex flex-col gap-5">
             <span className="w-fit whitespace-nowrap bg-blue-200/25 text-blue border font-semibold  border-blue rounded-2xl py-1 px-4">
@@ -81,7 +81,7 @@ export default function Sanitary() {
           </div>
         </div>
       </section>
-      <section className='bg-blue20'>
+      <section data-aos='slide-up' className='bg-blue20'>
         <div className="max-w-6xl mx-auto gap-5 p-6 flex flex-col ">
           <h2>{t('netoyage.protocol')}</h2>
           <div className="grid  md:grid-cols-5 gap-5">
@@ -128,7 +128,7 @@ export default function Sanitary() {
           </div>
         </div>
       </section>
-      <section >
+      <section data-aos='slide-up' >
         <div className="max-w-6xl mx-auto gap-5 p-6 flex flex-col ">
           <h2>{t('netoyage.intervention')}</h2>
           <div className="grid  md:grid-cols-3 lg:grid-cols-4 gap-5">
@@ -207,7 +207,7 @@ export default function Sanitary() {
           </div>
         </div>
       </section>
-      <section className='bg-blue'>
+      <section data-aos='slide-up' className='bg-blue'>
         <div className="max-w-6xl mx-auto gap-5 p-6 grid md:grid-cols-2">
           <div className="flex flex-col  gap-5 text-white">
             <h2 className="font-syne md:text-4xl text-white text-2xl leading-10 tracking-tight font-extrabold">{t('netoyage.produit')}</h2>
@@ -234,7 +234,7 @@ export default function Sanitary() {
 
         </div>
       </section>
-      <section >
+      <section data-aos='slide-up' >
         <div className="max-w-6xl mx-auto gap-5 p-6 flex flex-col ">
           <h2>{t('netoyage.gagnez')}</h2>
           <div className="grid  md:grid-cols-3  gap-5">
@@ -295,7 +295,7 @@ export default function Sanitary() {
           </div>
         </div>
       </section>
-      <section >
+      <section data-aos='slide-up' >
         <div className="max-w-6xl mx-auto gap-5 p-6 flex flex-col ">
           <h2>{t('netoyage.faq')}</h2>
           <div className="grid gap-2">
@@ -342,7 +342,7 @@ export default function Sanitary() {
           </div>
         </div>
       </section>
-      <section className="m-2 bg-blue max-w-6xl md:mx-auto flex flex-col gap-2 p-3 max-md:p-2 rounded-2xl items-center justify-center text-white">
+      <section data-aos='slide-left' className="m-2 bg-blue max-w-6xl md:mx-auto flex flex-col gap-2 p-3 max-md:p-2 rounded-2xl items-center justify-center text-white">
         <h2 className="md:text-4xl text-2xl font-header font-extrabold leading-10 tracking-tight text-center">{t('netoyage.pret')}</h2>
         <div className="flex gap-5 p-6 max-md:flex-col">
           <button className='flex btn-devis bg-violet  gap-2 items-center'>
@@ -350,7 +350,7 @@ export default function Sanitary() {
             <ArrowRight />
           </button>
 
-          <button className='flex btn-devis bg-green  gap-2 items-center' type='submit'> <MessageCircle /><a href="">{t('contact.whatsapp1')}</a></button>
+          <button className='flex btn-devis bg-green  gap-2 items-center' type='submit'> <MessageCircle /><a href="https://wa.me/+237">{t('contact.whatsapp1')}</a></button>
 
 
         </div>
