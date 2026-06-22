@@ -62,8 +62,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
   {/* Logo & Socials */}
   <div data-aos="fade-up" className="flex flex-col gap-5">
-    <Image src={logo} height={33} width={63} alt="logo" priority />
-
+    <Link href={`/${locale}`}><Image src={logo} height={33} width={63} alt="logo" priority /></Link>
+  
     <p>{t("footer.div1text")}</p>
 
     <div className="flex items-center gap-3 flex-wrap">

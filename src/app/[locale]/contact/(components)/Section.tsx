@@ -53,16 +53,34 @@ export default function Contacts() {
                                 {t("contact.service")}
                                 <select defaultValue="" className="input1 p-2">
                                     <option value="" disabled>
-                                        {t("contact.service")}
+                                    
                                     </option>
                                     <option value="nettoyage-sanitaire">
-                                        Nettoyage sanitaire
+                                        {t("service.hygiene")}
                                     </option>
-                                    <option value="assainissement">
-                                        Assainissement
+                                    <option value="nettoyage-sanitaire">
+                                        {t("service.netoyage")}
                                     </option>
-                                    <option value="qhse">
-                                        Services QHSE
+                                     <option value="nettoyage-sanitaire">
+                                        {t("service.entretien")}
+                                    </option>
+                                     <option value="nettoyage-sanitaire">
+                                        {t("service.piscine")}
+                                    </option>
+                                     <option value="nettoyage-sanitaire">
+                                        {t("service.traitement")}
+                                    </option>
+                                     <option value="nettoyage-sanitaire">
+                                        {t("service.emballage")}
+                                    </option>
+                                     <option value="nettoyage-sanitaire">
+                                        {t("service.navire")}
+                                    </option>
+                                     <option value="nettoyage-sanitaire">
+                                        {t("service.audit")}
+                                    </option>
+                                     <option value="nettoyage-sanitaire">
+                                        {t("service.qhse")}
                                     </option>
                                 </select>
                             </label>

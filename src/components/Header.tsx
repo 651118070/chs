@@ -28,7 +28,7 @@ export default function Header() {
     { href: `/${locale}`, label: t("navbar.home") },
     { href: `/${locale}/about`, label: t("navbar.about") },
     { href: `/${locale}/services`, label: t("navbar.service") },
-    { href: `/${locale}/sanitaire`, label: t("navbar.nettoyage") },
+    { href: `/${locale}/sanitary`, label: t("navbar.nettoyage") },
     { href: `/${locale}/contact`, label: t("navbar.contact") },
    
   ];
@@ -37,7 +37,7 @@ export default function Header() {
       <div className='max-w-6xl mx-auto p-6 '>
         {/*------------------------------------- desktop menu -------------------------------- */}
         <nav className='hidden md:flex justify-between gap-5'>
-         <Link href={'/${locale}'}>
+         <Link href={`/${locale}`}>
            <Image
           src={logo}
           alt="CHS"
@@ -52,7 +52,7 @@ export default function Header() {
                 <Link
                   href={href}
                   className={`transition-colors duration-300 hover:text-violet ${
-                    pathname === href ? "text-blue hover:text-white px-2 py-1 rounded" : ""
+                    pathname === href ? "text-blue  px-2 py-1 rounded" : ""
                   }`}
                 >
                   {label}
@@ -61,7 +61,7 @@ export default function Header() {
             ))}
           </ul>
      <div className='flex gap-2 items-center'>
-           <button className='btn-devis'> <Link href={'/${locale}/contact'}>{t('navbar.devis')}</Link></button>
+           <button className='btn-devis'> <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link></button>
            <div
           aria-label="Changer la langue"
           className="flex  gap-4"
@@ -73,7 +73,7 @@ export default function Header() {
      </div>
         </nav>
         <div className="md:hidden flex justify-between">
-               <Link href={'/${locale}/'}>
+               <Link href={`/${locale}`}>
            <Image
           src={logo}
           alt="CHS"
@@ -104,7 +104,7 @@ export default function Header() {
             ))}
           </ul>
   
-           <button className='btn-devis'> <Link href={'/${locale}/contact'}>{t('navbar.devis')}</Link></button>
+           <button className='btn-devis'> <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link></button>
            <div
           aria-label="Changer la langue"
           className="flex  gap-4"
