@@ -15,7 +15,7 @@ import gap from '@/public/assets/gap.png'
 
 import Image from 'next/image';
 
-import { ArrowRight, CircleCheck, MessageCircle } from "lucide-react";
+import { ArrowRight, CircleCheck } from "lucide-react";
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
@@ -31,14 +31,14 @@ export default function Services() {
   const locale = params?.locale || "fr";
   return (
     <main>
-      <section data-aos='slide-up' className='bg-blue20'>
+      <section  data-aos='slide-up' className='bg-blue20 mt-20'>
         <div className='flex items-center justify-center md:gap-5 gap-3 flex-col max-w-6xl mx-auto p-6'>
           <h1 className='text-white'>{t('service.header')}-<span className='text-violet font-header md:text-5xl text-2xl font-extrabold leading-12 '>{t('service.span')}</span></h1>
           <p className='md:text-[18px] text-center'>{t('service.text')}
           </p>
         </div>
       </section>
-      <section data-aos='slide-up'>
+      <section id='hygiene'  data-aos='slide-up'>
         <div className='grid md:grid-cols-2 gap-5 max-w-6xl mx-auto p-6'>
           <div className='flex flex-col gap-5'>
             <div className='flex gap-2 items-center'>
@@ -77,7 +77,7 @@ export default function Services() {
                 {t("service.haute")}
               </li>
             </ul>
-            <button className='flex btn-devis md:w-1/3 w-1/2 gap-2 items-center'>
+           <button className='flex btn-devis justify-center  gap-2 items-center'>
               <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
               <ArrowRight />
             </button>
@@ -131,12 +131,15 @@ export default function Services() {
                 <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
                   {t('service.hotel')}
                 </span>
+                  <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.autres')}
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section data-aos='slide-up' className='bg-blue20'>
+      <section id='netoyage' data-aos='slide-up' className='bg-blue20'>
         <div className='grid md:grid-cols-2 gap-5 max-w-6xl mx-auto p-6'>
           <div className='flex flex-col gap-5'>
             <div className='flex gap-2 items-center'>
@@ -175,7 +178,7 @@ export default function Services() {
                 {t("service.haute")}
               </li> */}
             </ul>
-            <button className='flex btn-devis md:w-1/3 w-1/2 gap-2 items-center'>
+             <button className='flex btn-devis justify-center  gap-2 items-center'>
               <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
               <ArrowRight />
             </button>
@@ -228,12 +231,15 @@ export default function Services() {
                 <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
                   {t('service.zone')}
                 </span>
+                  <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.autres')}
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section data-aos='slide-up' >
+      <section id='entretien' data-aos='slide-up' >
         <div className='grid md:grid-cols-2 gap-5 max-w-6xl mx-auto p-6'>
           <div className='flex flex-col gap-5'>
             <div className='flex gap-2 items-center'>
@@ -272,7 +278,7 @@ export default function Services() {
                 {t("service.haute")}
               </li> */}
             </ul>
-            <button className='flex btn-devis md:w-1/3 w-1/2 gap-2 items-center'>
+              <button className='flex btn-devis justify-center  gap-2 items-center'>
               <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
               <ArrowRight />
             </button>
@@ -325,12 +331,18 @@ export default function Services() {
                 <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
                   {t('service.espace')}
                 </span>
+                  <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.hotel')}
+                </span>
+                  <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.autres')}
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section data-aos='slide-up' className='bg-blue20'>
+      <section id='piscine' data-aos='slide-up' className='bg-blue20'>
         <div className='grid md:grid-cols-2 gap-5 max-w-6xl mx-auto p-6'>
           <div className='flex flex-col gap-5'>
             <div className='flex gap-2 items-center'>
@@ -369,7 +381,7 @@ export default function Services() {
                 {t("service.haute")}
               </li> */}
             </ul>
-            <button className='flex btn-devis md:w-1/3 w-1/2 gap-2 items-center'>
+             <button className='flex btn-devis justify-center  gap-2 items-center'>
               <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
               <ArrowRight />
             </button>
@@ -422,12 +434,15 @@ export default function Services() {
                 <span className="w-fit whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
                   {t('service.touristique')}
                 </span>
+                   <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.autres')}
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section data-aos='slide-up' >
+      <section id='traitement' data-aos='slide-up' >
         <div className='grid md:grid-cols-2 gap-5 max-w-6xl mx-auto p-6'>
           <div className='flex flex-col gap-5'>
             <div className='flex gap-2 items-center'>
@@ -466,14 +481,12 @@ export default function Services() {
                 {t("service.haute")}
               </li> */}
             </ul>
-            <button className='flex btn-devis md:w-1/3 w-1/2 gap-2 items-center'>
+          <button className='flex btn-devis justify-center  gap-2 items-center'>
               <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
               <ArrowRight />
             </button>
              
-              <button type='submit' className='text-nowrap text-[14px]'>
-                <MessageCircle />
-                <a href="">{t('contact.whatsapp1')}</a></button>
+            
           </div>
           <div className="flex flex-col gap-6">
             <h3 className="text-blue font-semibold font-base leading-6 text-[16px]">
@@ -523,6 +536,9 @@ export default function Services() {
                 <span className="w-fit whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
                   {t('service.locale')}
                 </span>
+               <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.autres')}
+                </span>
               </div>
             </div>
           </div>
@@ -567,7 +583,7 @@ export default function Services() {
                 {t("service.haute")}
               </li> */}
             </ul>
-            <button className='flex btn-devis md:w-1/3 w-1/2 gap-2 items-center'>
+             <button className='flex btn-devis justify-center  gap-2 items-center'>
               <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
               <ArrowRight />
             </button>
@@ -620,6 +636,9 @@ export default function Services() {
                 <span className="w-fit whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
                   {t('service.commerce')}
                 </span>
+                   <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.autres')}
+                </span>
               </div>
             </div>
           </div>
@@ -664,7 +683,7 @@ export default function Services() {
                 {t("service.haute")}
               </li> */}
             </ul>
-            <button className='flex btn-devis md:w-1/3 w-1/2 gap-2 items-center'>
+             <button className='flex btn-devis justify-center  gap-2 items-center'>
               <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
               <ArrowRight />
             </button>
@@ -717,6 +736,9 @@ export default function Services() {
                 <span className="w-fit whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
                   {t('service.douane')}
                 </span>
+                   <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.autres')}
+                </span>
               </div>
             </div>
           </div>
@@ -761,7 +783,7 @@ export default function Services() {
                 {t("service.haute")}
               </li> */}
             </ul>
-            <button className='flex btn-devis md:w-1/3 w-1/2 gap-2 items-center'>
+           <button className='flex btn-devis justify-center  gap-2 items-center'>
               <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
               <ArrowRight />
             </button>
@@ -814,12 +836,15 @@ export default function Services() {
                 <span className="w-fit whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
                   {t('service.sante')}
                 </span>
+                   <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.autres')}
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section data-aos='slide-up' >
+      <section  data-aos='slide-up' id='qhse' >
         <div className='grid md:grid-cols-2 gap-5 max-w-6xl mx-auto p-6'>
           <div className='flex flex-col gap-5'>
             <div className='flex gap-2 items-center'>
@@ -858,7 +883,7 @@ export default function Services() {
                 {t("service.haute")}
               </li> */}
             </ul>
-            <button className='flex btn-devis md:w-1/3 w-1/2 gap-2 items-center'>
+             <button className='flex btn-devis justify-center  gap-2 items-center'>
               <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
               <ArrowRight />
             </button>
@@ -910,6 +935,9 @@ export default function Services() {
 
                 <span className="w-fit whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
                   {t('service.resto')}
+                </span>
+                   <span className="whitespace-nowrap bg-blue-200/25 text-blue border border-blue rounded-2xl py-1 px-4">
+                  {t('service.autres')}
                 </span>
               </div>
             </div>

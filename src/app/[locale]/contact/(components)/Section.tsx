@@ -21,11 +21,11 @@ export default function Contacts() {
 
     return (
         <main className='bg-blue20'>
-            <div data-aos='slide-up' className='grid max-w-6xl mx-auto gap-5 p-6'>
+            <section data-aos='slide-up' className='grid max-w-6xl mx-auto gap-5 p-6 mt-20'>
                 <div className='flex items-center gap-5 flex-col'>
                     <h1 className='text-white text-nowrap'>{t('contact.header')}-<span className='text-violet font-header md:text-5xl text-2xl font-extrabold leading-12 '>{t('contact.us')}</span></h1>
-                    <p className='md:text-[18px]'>{t('contact.text')}
-                        </p>
+                    <p data-aos='zoom-in' className='md:text-[18px] '>{t('contact.text')}
+                    </p>
                 </div>
                 <div className='grid md:grid-cols-2 gap-5'>
                     <form data-aos='slide-right' action="" className='bg-white rounded-xl shadow p-6 flex flex-col gap-5'>
@@ -38,12 +38,21 @@ export default function Contacts() {
                                 {t('contact.name')}
                                 <input type="text" className='input1' />
                             </label>
-                            <label htmlFor="" className='flex flex-col gap-2' >
+                             <label htmlFor="" className='flex flex-col gap-2' >
+                                {t('contact.email')}*
+                                <input type="email" className='input1' required />
+                            </label>
+                              <label htmlFor="" className='flex flex-col gap-2' >
+                                {t('contact.phone')}
+                                <input type="tel" className='input1' required />
+                            </label>
+                             <label htmlFor="" className='flex flex-col gap-2' >
                                 {t('contact.entreprise')}
                                 <input type="text" className='input1' />
                             </label>
                         </div>
                         <div className="grid md:grid-cols-2 gap-2">
+                           
                             <label className="flex flex-col gap-2">
                                 {t("contact.ville")}
                                 <input type="text" className="input1" />
@@ -53,7 +62,7 @@ export default function Contacts() {
                                 {t("contact.service")}
                                 <select defaultValue="" className="input1 p-2">
                                     <option value="" disabled>
-                                    
+
                                     </option>
                                     <option value="nettoyage-sanitaire">
                                         {t("service.hygiene")}
@@ -61,25 +70,25 @@ export default function Contacts() {
                                     <option value="nettoyage-sanitaire">
                                         {t("service.netoyage")}
                                     </option>
-                                     <option value="nettoyage-sanitaire">
+                                    <option value="nettoyage-sanitaire">
                                         {t("service.entretien")}
                                     </option>
-                                     <option value="nettoyage-sanitaire">
+                                    <option value="nettoyage-sanitaire">
                                         {t("service.piscine")}
                                     </option>
-                                     <option value="nettoyage-sanitaire">
+                                    <option value="nettoyage-sanitaire">
                                         {t("service.traitement")}
                                     </option>
-                                     <option value="nettoyage-sanitaire">
+                                    <option value="nettoyage-sanitaire">
                                         {t("service.emballage")}
                                     </option>
-                                     <option value="nettoyage-sanitaire">
+                                    <option value="nettoyage-sanitaire">
                                         {t("service.navire")}
                                     </option>
-                                     <option value="nettoyage-sanitaire">
+                                    <option value="nettoyage-sanitaire">
                                         {t("service.audit")}
                                     </option>
-                                     <option value="nettoyage-sanitaire">
+                                    <option value="nettoyage-sanitaire">
                                         {t("service.qhse")}
                                     </option>
                                 </select>
@@ -89,10 +98,10 @@ export default function Contacts() {
                             <label htmlFor="">{t('contact.message')}</label>
                             <textarea name="" className='resize-none w-full input1 h-24 p-5' placeholder={t('contact.describe')}></textarea>
                         </div>
-                        <div className='flex gap-2 btn w-1/2 justify-center'>
-                            <Send />
-                            <button type='submit' className='text-nowrap text-[14px]'>{t('contact.send')}</button>
-                        </div>
+
+
+                        <button type='submit' className='flex gap-2  items-center justify-center btn-devis'><Send />{t('contact.send')}</button>
+
 
                     </form>
                     <form data-aos='slide-left' action="" className='bg-white rounded-xl shadow p-6 flex flex-col justify-between gap-5'>
@@ -116,7 +125,9 @@ export default function Contacts() {
                             </div>
                             <div className='font-base flex flex-col justify-center text-[14px]'>
                                 <h4 className="text-blue">{t("contact.phone")}</h4>
-                                <span>+237 6 xxx xxx xxx</span>
+                                <span>+237 6 93 14 21 34</span>
+                                <span>+237 6 99 94 94 50</span>
+                                <span>+237 6 99 94 39 26</span>
                             </div>
                         </div>
 
@@ -126,7 +137,7 @@ export default function Contacts() {
                             </div>
                             <div className='font-base flex flex-col justify-center text-[14px]'>
                                 <h4 className="text-blue">Email</h4>
-                                <span>contact@votreentreprise.com</span>
+                                 <span>chs_cameroun@yahoo.fr</span>
                             </div>
                         </div>
 
@@ -136,18 +147,17 @@ export default function Contacts() {
                             </div>
                             <div className="className='font-base flex flex-col justify-center text-[14px]">
                                 <h4 className="text-blue">{t("contact.hours")}</h4>
-                                <span>{t("contact.date")}</span>
-                                <span>{t("contact.date1")}</span>
+                                <span className='font-medium'>{t("contact.date")}</span>
+                                <span className='font-medium'>{t("contact.date1")}</span>
                             </div>
                         </div>
-                        <div className='flex gap-2 btn bg-green w-1/2 justify-center'>
-                            <MessageCircle />
-                            <button type='submit' className='text-nowrap text-[14px]'><a href="">{t('contact.whatsapp1')}</a></button>
-                        </div>
+
+                        <button type='submit' className='bg-green flex gap-2 justify-center items-center btn-devis'><a href={'https://wa.me/+237699949450'}><MessageCircle />{t('contact.whatsapp1')}</a></button>
+
                     </form>
                 </div>
 
-            </div>
+            </section>
         </main>
     )
 }

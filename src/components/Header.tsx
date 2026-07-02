@@ -33,7 +33,7 @@ export default function Header() {
    
   ];
   return (
-    <header>
+    <header className='fixed w-full z-30 top-0 bg-white'>
       <div className='max-w-6xl mx-auto p-6 '>
         {/*------------------------------------- desktop menu -------------------------------- */}
         <nav className='hidden md:flex justify-between gap-5'>

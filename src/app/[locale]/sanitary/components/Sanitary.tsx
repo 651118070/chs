@@ -20,8 +20,8 @@ import site from '@/public/assets/site.png'
 import man from '@/public/assets/man.jpg'
 import walk from '@/public/assets/walk.png'
 
-import group from '@/public/assets/group.jpg'
-import group1 from '@/public/assets/group1.jpg'
+import n1 from '@/public/assets/n1.jpg'
+import n2 from '@/public/assets/n2.jpg'
 
 import { useEffect } from "react";
 import {
@@ -42,25 +42,26 @@ export default function Sanitary() {
   const locale = params?.locale || "fr";
   return (
     <main>
-      <section data-aos='slide-up' className='bg-blue20'>
+      <section data-aos='slide-up' className='bg-blue20 mt-20'>
         <div className='max-w-6xl mx-auto gap-5 p-6'>
           <div className="flex flex-col gap-5 justify-center max-md:items-center">
-            <h1 className="max-md:text-center">{t("netoyage.sanitaire")}</h1>
+            <h1 className='text-white text-center  text-2xl'>{t("netoyage.sanitaire")}-</h1>
+
             <p className="md:text-[18px] max-md:text-center">{t("netoyage.ntext")}</p>
             <div className="flex gap-5 p-6 max-md:flex-col">
-              <button className='flex btn-devis bg-violet  gap-2 items-center'>
+              <button className='flex btn-devis bg-violet justify-center  gap-2 items-center'>
                 <Link href={`/${locale}/contact`}>{t('navbar.devis')}</Link>
                 <ArrowRight />
               </button>
 
-              <button className='flex btn-devis bg-green  gap-2 items-center' type='submit'> <MessageCircle /><a href="">{t('contact.whatsapp1')}</a></button>
+              <button className='flex btn-devis bg-green justify-center  gap-2 items-center' type='submit'> <MessageCircle /><a href={'https://wa.me/+237699949450'}>{t('contact.whatsapp1')}</a></button>
 
 
             </div>
           </div>
         </div>
       </section>
-      <section data-aos='slide-up'>
+      <section data-aos='slide-up' id="realisation">
         <div className="max-w-6xl mx-auto p-6 gap-5">
           <div className="flex flex-col gap-5">
             <span className="w-fit whitespace-nowrap bg-blue-200/25 text-blue border font-semibold  border-blue rounded-2xl py-1 px-4">
@@ -237,12 +238,28 @@ export default function Sanitary() {
               </li>
             </ul>
           </div>
-          <div data-aos="zoom-in" className="grid grid-cols-2 rounded-2xl">
-            <Image src={man} alt="cleaning image " className="object-cover rounded-tl-2xl" />
-            <Image src={group} alt="cleaning image " className="object-cover rounded-tr-2xl" />
-           <Image src={group1} alt="cleaning image" className="object-cover justify-self-center rounded-brok-2xl" />
-           <Image src={walk} alt="cleaning image" className="object-cover justify-self-center rounded-bl-2xl" />
-          </div>
+       <div data-aos="zoom-in" className="grid grid-cols-2 rounded-2xl overflow-hidden">
+  <Image
+    src={man}
+    alt="cleaning image"
+    className="w-full h-48 object-cover rounded-tl-2xl"
+  />
+  <Image
+    src={n1}
+    alt="cleaning image"
+    className="w-full h-48 object-cover rounded-tr-2xl"
+  />
+  <Image
+    src={n2}
+    alt="cleaning image"
+    className="w-full h-48 object-cover rounded-bl-2xl"
+  />
+  <Image
+    src={walk}
+    alt="cleaning image"
+    className="w-full h-48 object-cover rounded-br-2xl"
+  />
+</div>
 
         </div>
       </section>
@@ -307,7 +324,7 @@ export default function Sanitary() {
           </div>
         </div>
       </section>
-      <section data-aos='slide-up' >
+      <section data-aos='slide-up' id="faq" >
         <div className="max-w-6xl mx-auto gap-5 p-6 flex flex-col ">
           <h2>{t('netoyage.faq')}</h2>
           <div className="grid gap-2">
@@ -362,7 +379,7 @@ export default function Sanitary() {
             <ArrowRight />
           </button>
 
-          <button className='flex btn-devis bg-green  gap-2 items-center' type='submit'> <MessageCircle /><a href="https://wa.me/+237">{t('contact.whatsapp1')}</a></button>
+          <button className='flex btn-devis bg-green justify-center  gap-2 items-center' type='submit'> <MessageCircle /><a href={'https://wa.me/+237699949450'}>{t('contact.whatsapp1')}</a></button>
 
 
         </div>

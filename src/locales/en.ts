@@ -41,6 +41,8 @@ export default {
   "home.ctext": "Supply of soap, paper, and hand sanitizer",
   "home.formule": "Contract Plans",
   "home.quotidien": "Daily",
+  "home.popular":"Popular",
+   "home.atout": "Why Choose Us",
   "home.qtext": "Cleaning every day",
   "home.hebdomadaire": "Weekly",
   "home.htext": "Most Popular",
@@ -98,7 +100,117 @@ export default {
   "home.patext": "Major organizations in Cameroon and across Central Africa trust us with their hygiene and compliance challenges.",
   "home.equipe": "Need a Reliable Team for Your Sanitary Facilities and Premises?",
   "home.equipetext": "Receive a personalized quote within 24 hours. Our experts are ready to assist you.",
+  "testimonials": [
+    {
+      "name": "Brendel Yomi",
+      "company": "Restaurant",
+      "message": "Fast response, professional team and quality products. Our restaurant has never been this clean."
+    },
+    {
+      "name": "Marie Ndzié",
+      "company": "Private Clinic",
+      "message": "We had strict hygiene requirements. The team exceeded our expectations."
+    },
+    {
+      "name": "Jean Moukouri",
+      "company": "Secondary School",
+      "message": "Reliable and punctual service. The premises are spotless after every visit."
+    },
+    {
+      "name": "Sarah Nguimfack",
+      "company": "Office Building",
+      "message": "We are very satisfied with the team's professionalism and responsiveness."
+    },
+    {
+      "name": "Patrick Tchoua",
+      "company": "Hotel",
+      "message": "The quality of the cleaning service is outstanding. Our guests notice the difference."
+    }
+  ],
 
+  "about.header": "About",
+  "about.chs": "CHS S.A",
+
+  "about.text": "Founded in the heart of Cameroon, CHS S.A was born from the belief that clean and healthy environments are a fundamental right. Our mission is to make professional hygiene services accessible to all sectors of activity.",
+
+  "about.mission": "Our Mission",
+  "about.vision": "Our Vision",
+
+  "about.mtext": "To provide world-class hygiene, sanitation, and safety solutions tailored to African realities. We protect public health by raising cleanliness standards in every space we serve.",
+
+  "about.vtext": "To become the benchmark for professional hygiene in Central Africa. We aspire to transform the perception of cleanliness into a true driver of public health, economic performance, and social well-being.",
+
+  "about.guide": "What Guides Us",
+
+  "about.excellence": "Excellence",
+  "about.extext": "We strive for the highest standards of quality in every service we provide.",
+
+  "about.integrite": "Integrity",
+  "about.intext": "Transparency, honesty, and professional ethics guide our actions.",
+
+  "about.security": "Safety",
+  "about.setext": "The safety of our teams and your facilities is our top priority.",
+
+  "about.innovation": "Innovation",
+  "about.inovtext": "We embrace the latest technologies and industry best practices.",
+
+  "about.environement": "Environmental Responsibility",
+  "about.envtext": "We promote sustainable practices and environmentally responsible solutions.",
+
+  "about.profesionel": "Qualified Professionals",
+  "about.protext": "A multidisciplinary team dedicated to maintaining the highest standards of hygiene.",
+"about.pdg": "A Word from the CEO",
+"about.1988":"Since 1988",
+"about.camroun":"Douala,Cameroon",
+ "about.name": "Mr. MOMHA Joseph, CEO",
+
+  "about.pdgt": "Chief Executive Officer, CHS S.A",
+
+  "about.text1": "Passionate about public health and driven by an ambitious vision, he founded CHS S.A with a clear objective: to revolutionize hygiene and sanitation services in Central Africa. Convinced that cleanliness is a fundamental driver of health and development, he built a company that combines professional excellence, quality products, and a strong commitment to people.",
+
+  "about.text2": "Under his leadership, CHS S.A has become a benchmark in Cameroon, serving more than 200 active clients across various industries and training the next generation of professionals in international QHSE standards.",
+
+  "about.word": "A clean restroom means a protected life. That is why I created CHS S.A—because every African deserves a healthy environment that respects their dignity and well-being.",
+
+  "about.ceo": "CEO, CHS S.A",
+  "about.entretien":"Cleaning staff",
+"about.entrtext":"Trained in international QHSE standards",
+"about.plombier":"Plumbers",
+"about.plomtext":"Sanitary maintenance and repairs",
+"about.electricien":"Electricians",
+"about.electext":"Installation and troubleshooting",
+"about.careleur":"Tilers",
+"about.cartext":"Surface renovation",
+"about.application":"Pest control technicians",
+"about.apptext":"Rodent control and insect extermination",
+"about.deco":"Interior design and decoration",
+"about.deco1": "Interior decorators",
+ "about.award":"Our Awards",
+  "engagement.title": "Career and Commitments",
+
+  "engagement.item1.title": "President of the Association of Pest Control Companies in Cameroon (GSDC)",
+  "engagement.item1.text": "Leader of the Association of Pest Control Companies in Cameroon.",
+
+  "engagement.item2.title": "General Coordinator of FASHAC NGO (Forum for Supporting Social Hygiene and Sanitation Initiatives in Cameroon)",
+  "engagement.item2.text": "Responsible for hygiene and sanitation initiatives in Cameroon.",
+
+  "engagement.item3.title": "Member of the National Phytosanitary Council",
+  "engagement.item3.text": "Contributor to national phytosanitary policies.",
+
+  "engagement.item4.title": "Winner of the International Quality Leadership Star Award – Gold Category, Paris 2008",
+  "engagement.item4.text": "Awarded in Paris in 2008 for leadership and commitment to quality.",
+
+  "engagement.item5.title": "Dean, Promoter and Pioneer in all the above-mentioned fields",
+  "engagement.item5.text": "Recognized reference and pioneer in his field of expertise.",
+
+  "engagement.item6.title": "Patriarch, Trainer",
+  "engagement.item6.text": "Mentor dedicated to sharing knowledge and expertise.",
+
+  "engagement.item7.title": "Honorary Member of BID (Business Initiatives Directions), Madrid, Spain",
+  "engagement.item7.text": "",
+
+  "engagement.item8.title": "National and International Consultant",
+  "engagement.item8.text": "",
 
   "service.header": "All Our",
   "service.span": "Services",
@@ -129,6 +241,7 @@ export default {
   "service.resto": "Restaurants",
   "service.industry": "Industries",
   "service.hotel": "Hotels",
+   "service.autres":"And others ...",
   "service.netoyage": "Industrial Cleaning",
   "service.ntext": "Professional cleaning services including tile stripping and waxing, floor sweeping and mopping, marble restoration, parquet polishing, window cleaning, carpet shampooing, and coffee services.",
   "service.carreaux": "Tile Stripping & Waxing",
@@ -233,7 +346,7 @@ export default {
   "netoyage.before":"Before / After",
   "netoyage.btext":"A visible transformation from the very first intervention",
   "netoyage.cas":"Cases",
-  "netoyage.resto":"Restaurants / Offices / Hotels",
+  "netoyage.resto":"Restaurants / Offices / Hotels / etc",
   "netoyage.protocol":"Our 5-Step Process",
   "netoyage.audit":"Assessment & Audit",
   "netoyage.hygiene":"Customized Hygiene Plan",

@@ -41,7 +41,7 @@ export default function Footer() {
   const locale = params?.locale || "fr";
   const router = useRouter();
   const serviceItems = [
-    { href: `/${locale}/services/#sanitary`, label: t("footer.sanitary") },
+    { href: `/${locale}/services/`, label: t("footer.sanitary") },
     { href: `/${locale}/services/#hygiene`, label: t("footer.hygiene") },
     { href: `/${locale}/services/#traitement`, label: t("footer.traitement") },
     { href: `/${locale}/services/#netoyage`, label: t("footer.netoyage") },
@@ -50,10 +50,10 @@ export default function Footer() {
     { href: `/${locale}/services/#qhse`, label: t("footer.qhse") },
   ];
    const resourceItems = [
-    { href: `/${locale}/resources/#faq`, label: t("footer.faq") },
-    { href: `/${locale}/resources/#realisation`, label: t("footer.realisation") },
-    { href: `/${locale}/resources/#about`, label: t("footer.about") },
-    { href: `/${locale}/resources/#contact`, label: t("footer.contact") },
+    { href: `/${locale}/sanitary/#faq`, label: t("footer.faq") },
+    { href: `/${locale}/sanitary/#realisation`, label: t("footer.realisation") },
+    { href: `/${locale}/about`, label: t("footer.about") },
+    { href: `/${locale}/contact`, label: t("footer.contact") },
    
   ];
   return (
@@ -66,25 +66,25 @@ export default function Footer() {
   
     <p>{t("footer.div1text")}</p>
 
-    <div className="flex items-center gap-3 flex-wrap">
+    <div className="flex items-center gap-3 flex-wrap" data-aos='zoom-in'>
       <a href="#">
-        <Image src={whatsapp} className="w-10 h-10" alt="whatsapp" />
+        <Image src={whatsapp} className="w-10 h-10  transition-transform duration-300 hover:scale-105 hover:-translate-y-2" alt="whatsapp" />
       </a>
 
       <a href="#">
-        <Image src={facebook} className="w-10 h-10" alt="facebook" />
+        <Image src={facebook} className="w-10 h-10 transition-transform duration-300 hover:scale-105 hover:-translate-y-2" alt="facebook" />
       </a>
 
       <a href="#">
-        <Image src={linkedln} className="w-10 h-10" alt="linkedin" />
+        <Image src={linkedln} className="w-10 h-10 transition-transform duration-300 hover:scale-105 hover:-translate-y-2" alt="linkedin" />
       </a>
 
       <a href="#">
-        <Image src={instagram} className="w-10 h-10" alt="instagram" />
+        <Image src={instagram} className="w-10 h-10 transition-transform duration-300 hover:scale-105 hover:-translate-y-2" alt="instagram" />
       </a>
 
       <a href="#">
-        <Image src={youtube} className="w-10 h-10" alt="youtube" />
+        <Image src={youtube} className="w-10 h-10 transition-transform duration-300 hover:scale-105 hover:-translate-y-2" alt="youtube" />
       </a>
     </div>
   </div>
@@ -140,17 +140,21 @@ export default function Footer() {
 
       <div className="flex items-center gap-3">
         <Image src={location} className="w-5 h-5 shrink-0" alt="location" />
-        <span>Douala, Cameroun</span>
+        <span>Rue Bebey Elame Akwa Douala, Cameroun</span>
       </div>
 
       <div className="flex items-center gap-3">
         <Image src={phone} className="w-5 h-5 shrink-0" alt="phone" />
-        <span>+237 6 XXX XXX XXX</span>
+       <div className="flex flex-col">
+         <span>+237 6 93 14 21 34</span>
+        <span>+237 6 99 94 94 50</span> 
+        <span>+237 6 99 94 39 26</span> 
+       </div>
       </div>
 
       <div className="flex items-center gap-3">
         <Image src={mail} className="w-5 h-5 shrink-0" alt="mail" />
-        <span>contact@votreentreprise.com</span>
+        <span>chs_cameroun@yahoo.fr</span>
       </div>
     </div>
 
