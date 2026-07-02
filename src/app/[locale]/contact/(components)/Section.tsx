@@ -8,7 +8,8 @@ import location from "@/public/assets/location.png";
 import phone from "@/public/assets/phone.png";
 import mail from "@/public/assets/message.png";
 import clock from "@/public/assets/clock.png";
-
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 import Image from 'next/image';
 export default function Contacts() {
     useEffect(() => {
@@ -18,7 +19,8 @@ export default function Contacts() {
         });
     }, []);
     const t = useI18n();
-
+    const formRef = useRef();
+    
     return (
         <main className='bg-blue20'>
             <section data-aos='slide-up' className='grid max-w-6xl mx-auto gap-5 p-6 mt-20'>
@@ -28,7 +30,8 @@ export default function Contacts() {
                     </p>
                 </div>
                 <div className='grid md:grid-cols-2 gap-5'>
-                    <form data-aos='slide-right' action="" className='bg-white rounded-xl shadow p-6 flex flex-col gap-5'>
+                    <form ref={formRef}
+                        onSubmit={sendEmail} data-aos='slide-right' action="" className='bg-white rounded-xl shadow p-6 flex flex-col gap-5'>
                         <div className='flex gap-2 items-center'>
                             <FileText className='text-violet' />
                             <h2 className='text-blue'>{t('contact.devis')}</h2>
@@ -38,21 +41,21 @@ export default function Contacts() {
                                 {t('contact.name')}
                                 <input type="text" className='input1' />
                             </label>
-                             <label htmlFor="" className='flex flex-col gap-2' >
+                            <label htmlFor="" className='flex flex-col gap-2' >
                                 {t('contact.email')}*
                                 <input type="email" className='input1' required />
                             </label>
-                              <label htmlFor="" className='flex flex-col gap-2' >
+                            <label htmlFor="" className='flex flex-col gap-2' >
                                 {t('contact.phone')}
                                 <input type="tel" className='input1' required />
                             </label>
-                             <label htmlFor="" className='flex flex-col gap-2' >
+                            <label htmlFor="" className='flex flex-col gap-2' >
                                 {t('contact.entreprise')}
                                 <input type="text" className='input1' />
                             </label>
                         </div>
                         <div className="grid md:grid-cols-2 gap-2">
-                           
+
                             <label className="flex flex-col gap-2">
                                 {t("contact.ville")}
                                 <input type="text" className="input1" />
@@ -137,7 +140,7 @@ export default function Contacts() {
                             </div>
                             <div className='font-base flex flex-col justify-center text-[14px]'>
                                 <h4 className="text-blue">Email</h4>
-                                 <span>chs_cameroun@yahoo.fr</span>
+                                <span>chs_cameroun@yahoo.fr</span>
                             </div>
                         </div>
 

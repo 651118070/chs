@@ -51,6 +51,7 @@
   html {
     font-family: var(--font-inter);
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body{
     overflow-y: scroll;
