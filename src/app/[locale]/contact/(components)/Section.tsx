@@ -8,8 +8,8 @@ import location from "@/public/assets/location.png";
 import phone from "@/public/assets/phone.png";
 import mail from "@/public/assets/message.png";
 import clock from "@/public/assets/clock.png";
-import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+// import emailjs from "@emailjs/browser";
+// import { useRef } from "react";
 import Image from 'next/image';
 export default function Contacts() {
     useEffect(() => {
@@ -19,7 +19,7 @@ export default function Contacts() {
         });
     }, []);
     const t = useI18n();
-    const formRef = useRef();
+
     
     return (
         <main className='bg-blue20'>
@@ -30,8 +30,7 @@ export default function Contacts() {
                     </p>
                 </div>
                 <div className='grid md:grid-cols-2 gap-5'>
-                    <form ref={formRef}
-                        onSubmit={sendEmail} data-aos='slide-right' action="" className='bg-white rounded-xl shadow p-6 flex flex-col gap-5'>
+                    <form data-aos='slide-right' action="" className='bg-white rounded-xl shadow p-6 flex flex-col gap-5'>
                         <div className='flex gap-2 items-center'>
                             <FileText className='text-violet' />
                             <h2 className='text-blue'>{t('contact.devis')}</h2>
