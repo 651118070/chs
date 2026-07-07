@@ -36,7 +36,7 @@ export default async function RootLayout({
           {children}
           <Footer />
         </I18nProviderClient>
-          <Toaster />
+          <Toaster dir="rtl" />
       </body>
     </html>
   );

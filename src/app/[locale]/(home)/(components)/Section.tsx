@@ -490,140 +490,29 @@ export default function Section() {
 
         </div>
       </section>
-      <section data-aos='slide-up'>
-        <div className='grid max-w-6xl mx-auto place-items-center gap-5 p-6'>
-          <div className='flex flex-col items-center gap-3'>
-            <span className="bg-[rgba(138,28,90,0.15)] font-semibold text-[12px] text-gray rounded-2xl px-3 py-1">{t('home.temoignages')}</span>
-            <h2 className='md:text-5xl text-2xl font-header text-center font-extrabold text-blue'>{t('home.confiance')}</h2>
-            <p className='font-base text-lg text-gray'>{t('home.confiance.text')}</p>
-            <div className="w-full max-w-5xl mx-auto py-10">
-              <Swiper
-                modules={[Navigation]}
-                navigation
-                spaceBetween={30}
-                slidesPerView={1}
-                speed={500}
-                autoplay
-                loop
-                className="rounded-2xl"
-              >
-                {/* Slide 1 */}
-                <SwiperSlide>
-                  <div className="flex flex-col items-center justify-center bg-blue20 p-10 gap-6 text-center rounded-xl shadow-sm">
-                    <Quote className='text-violet' />
-                    <p className=" text-lg max-md:text-sm text-blue">
-                      {t('testimonials.0.message')}
-                    </p>
-                    <div className='flex gap-3'>
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                    </div>
+   <section data-aos="slide-up" className="py-12 px-4">
+  <div className="max-w-6xl mx-auto">
+    <div className="flex flex-col items-center gap-4">
 
-                    <div className="flex flex-col items-center gap-1">
-                      <h4 className="font-semibold text-gray-900">{t('testimonials.0.name')}</h4>
-                      <h5 className="text-sm text-gray-500">
-                        {t('testimonials.0.company')}
-                      </h5>
-                    </div>
-                  </div>
-                </SwiperSlide>
+      <span className="bg-[rgba(138,28,90,0.15)] text-xs font-semibold text-gray rounded-full px-4 py-2">
+        {t("home.temoignages")}
+      </span>
 
-                <SwiperSlide>
-                  <div className="flex flex-col items-center justify-center bg-blue20 p-10 gap-6 text-center rounded-xl shadow-sm">
-                    <Quote className='text-violet' />
-                    <p className=" text-lg max-md:text-sm text-blue">
-                      {t('testimonials.1.message')}
-                    </p>
-                      <div className='flex gap-3'>
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                    </div>
+      <h2 className="text-center font-header font-extrabold text-blue text-3xl sm:text-4xl md:text-5xl">
+        {t("home.confiance")}
+      </h2>
 
+      <p className="text-center text-gray max-w-2xl text-sm sm:text-base md:text-lg">
+        {t("home.confiance.text")}
+      </p>
 
-                    <div className="flex flex-col items-center gap-1">
-                      <h4 className="font-semibold text-gray-900">{t('testimonials.1.name')}</h4>
-                      <h5 className="text-sm text-gray-500">
-                        {t('testimonials.1.company')}
-                      </h5>
-                    </div>
-                  </div>
-                </SwiperSlide>
+      <div className="w-full max-w-4xl mt-6">
+        {/* Swiper */}
+      </div>
 
-                <SwiperSlide>
-                  <div className="flex flex-col items-center justify-center bg-blue20 p-10 gap-6 text-center rounded-xl shadow-sm">
-                    <Quote className='text-violet' />
-                    <p className=" text-lg max-md:text-sm text-blue">
-                      {t('testimonials.2.message')}
-                    </p>
-                       <div className='flex gap-3'>
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                    </div>
-
-
-                    <div className="flex flex-col items-center gap-1">
-                      <h4 className="font-semibold text-gray-900">{t('testimonials.2.name')}</h4>
-                      <h5 className="text-sm text-gray-500">
-                        {t('testimonials.2.company')}
-                      </h5>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                 <SwiperSlide>
-                  <div className="flex flex-col items-center justify-center bg-blue20 p-10 gap-6 text-center rounded-xl shadow-sm">
-                    <Quote className='text-violet'/>
-                    <p className=" text-lg max-md:text-sm text-blue">
-                     {t('testimonials.3.message')}
-                    </p>
-                         <div className='flex gap-3'>
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                    </div>
-
-
-                    <div className="flex flex-col items-center gap-1">
-                      <h4 className="font-semibold text-gray-900">{t('testimonials.3.name')}</h4>
-                      <h5 className="text-sm text-gray-500">
-                        {t('testimonials.3.company')}
-                      </h5>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                 <SwiperSlide>
-                  <div className="flex flex-col items-center justify-center bg-blue20 p-10 gap-6 text-center rounded-xl shadow-sm">
-                    <Quote className='text-violet'/>
-                    <p className=" text-lg max-md:text-sm text-blue">
-                     {t('testimonials.4.message')}
-                    </p>
-                          <div className='flex gap-3'>
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                      <Star className='fill-violet stroke-transparent'/>
-                      <Star className='fill-violet stroke-transparent' />
-                    </div>
-
-                    <div className="flex flex-col items-center gap-1">
-                      <h4 className="font-semibold text-gray-900">{t('testimonials.4.name')}</h4>
-                      <h5 className="text-sm text-gray-500">
-                        {t('testimonials.4.company')}
-                      </h5>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-          </div>
-        </div>
-      </section>
-      
+    </div>
+  </div>
+</section>
 
       <section data-aos='slide-up' className='bg-blue'>
         <div className='grid gap-5 max-w-6xl mx-auto text-white place-items-center p-6'>
