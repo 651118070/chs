@@ -418,7 +418,7 @@ export default {
   "contact.us": "us",
   "contact.text": "Request a free quote or ask us any questions. Our team will respond within 24 hours.",
   "contact.devis": "Request a quote",
-  "contact.name": "Full name *",
+  "contact.name": "Full name ",
   "contact.whatsapp": "WhatsApp *",
   "contact.entreprise": "Company",
   "contact.ville": "City *",
