@@ -21,9 +21,7 @@ export default function Contacts() {
     const t = useI18n();
     const form = useRef<HTMLFormElement>(null);
 
-    const sendEmail = async (
-        e: React.FormEvent<HTMLFormElement>
-    ): Promise<void> => {
+    const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!form.current) return;
@@ -32,19 +30,18 @@ export default function Contacts() {
             await emailjs.sendForm(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
                 process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-                form.current!,
+                form.current,
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
             );
 
-            toast("Message envoye avec succes", {
-                duration: 3000,
-            });
+            toast.success("Message envoyé avec succès !");
             form.current.reset();
-        } catch (error) {
-            console.error("EmailJS Error:", error);
-            toast("Erreur lors de l'envoi du message", {
-                duration: 3000,
-            });
+        } catch  {
+          
+
+            toast.error(
+                 "Une erreur est survenue lors de l'envoi."
+            );
         }
     };
 
@@ -57,81 +54,136 @@ export default function Contacts() {
                     </p>
                 </div>
                 <div className='grid md:grid-cols-2 gap-5'>
-                    <form ref={form} onSubmit={sendEmail} data-aos='slide-right' action="" className='bg-white rounded-xl shadow p-6 flex flex-col gap-5'>
-                        <div className='flex gap-2 items-center'>
-                            <FileText className='text-violet' />
-                            <h2 className='text-blue'>{t('contact.devis')}</h2>
+                    <form
+                        ref={form}
+                        onSubmit={sendEmail}
+                        data-aos="slide-right"
+                        className="bg-white rounded-xl shadow p-6 flex flex-col gap-5"
+                    >
+                        <div className="flex gap-2 items-center">
+                            <FileText className="text-violet" />
+                            <h2 className="text-blue">{t("contact.devis")}</h2>
                         </div>
-                        <div className='grid md:grid-cols-2 gap-2'>
-                            <label htmlFor="" className='flex flex-col gap-2' >
-                                {t('contact.name')}
-                                <input type="text" className='input1' />
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                            <label className="flex flex-col gap-2">
+                                {t("contact.name")} *
+                                <input
+                                    type="text"
+                                    name="name"
+                                    className="input1"
+                                    required
+                                />
                             </label>
-                            <label htmlFor="" className='flex flex-col gap-2' >
-                                {t('contact.email')}*
-                                <input type="email" className='input1' required />
-                            </label>
-                            <label htmlFor="" className='flex flex-col gap-2' >
-                                {t('contact.phone')}
-                                <input type="tel" className='input1' required />
-                            </label>
-                            <label htmlFor="" className='flex flex-col gap-2' >
-                                {t('contact.entreprise')}
-                                <input type="text" className='input1' />
-                            </label>
-                        </div>
-                        <div className="grid md:grid-cols-2 gap-2">
 
                             <label className="flex flex-col gap-2">
-                                {t("contact.ville")}
-                                <input type="text" className="input1" />
+                                {t("contact.email")} *
+                                <input
+                                    type="email"
+                                    name="email"
+                                    className="input1"
+                                    required
+                                />
                             </label>
 
-                            <label className="flex flex-col  gap-2">
-                                {t("contact.service")}
-                                <select defaultValue="" className="input1 p-2">
-                                    <option value="" disabled>
+                            <label className="flex flex-col gap-2">
+                                {t("contact.phone")} *
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    className="input1"
+                                    required
+                                />
+                            </label>
 
+                            <label className="flex flex-col gap-2">
+                                {t("contact.entreprise")}
+                                <input
+                                    type="text"
+                                    name="company"
+                                    className="input1"
+                                />
+                            </label>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                            <label className="flex flex-col gap-2">
+                                {t("contact.ville")}
+                                <input
+                                    type="text"
+                                    name="city"
+                                    className="input1"
+                                />
+                            </label>
+
+                            <label className="flex flex-col gap-2">
+                                {t("contact.service")}
+                                <select
+                                    name="service"
+                                    defaultValue=""
+                                    className="input1 p-2"
+                                    required
+                                >
+                                    <option value="" disabled>
+                                        {t("contact.service")}
                                     </option>
-                                    <option value="nettoyage-sanitaire">
+
+                                    <option value={t("service.hygiene")}>
                                         {t("service.hygiene")}
                                     </option>
-                                    <option value="nettoyage-sanitaire">
+
+                                    <option value={t("service.netoyage")}>
                                         {t("service.netoyage")}
                                     </option>
-                                    <option value="nettoyage-sanitaire">
+
+                                    <option value={t("service.entretien")}>
                                         {t("service.entretien")}
                                     </option>
-                                    <option value="nettoyage-sanitaire">
+
+                                    <option value={t("service.piscine")}>
                                         {t("service.piscine")}
                                     </option>
-                                    <option value="nettoyage-sanitaire">
+
+                                    <option value={t("service.traitement")}>
                                         {t("service.traitement")}
                                     </option>
-                                    <option value="nettoyage-sanitaire">
+
+                                    <option value={t("service.emballage")}>
                                         {t("service.emballage")}
                                     </option>
-                                    <option value="nettoyage-sanitaire">
+
+                                    <option value={t("service.navire")}>
                                         {t("service.navire")}
                                     </option>
-                                    <option value="nettoyage-sanitaire">
+
+                                    <option value={t("service.audit")}>
                                         {t("service.audit")}
                                     </option>
-                                    <option value="nettoyage-sanitaire">
+
+                                    <option value={t("service.qhse")}>
                                         {t("service.qhse")}
                                     </option>
                                 </select>
                             </label>
                         </div>
-                        <div className='flex flex-col gap-2'>
-                            <label htmlFor="">{t('contact.message')}</label>
-                            <textarea name="" className='resize-none w-full input1 h-24 p-5' placeholder={t('contact.describe')}></textarea>
-                        </div>
 
+                        <label className="flex flex-col gap-2">
+                            {t("contact.message")}
+                            <textarea
+                                name="message"
+                                className="resize-none w-full input1 h-32 p-4"
+                                placeholder={t("contact.describe")}
+                                required
+                            />
+                        </label>
 
-                        <button type='submit' className='flex gap-2  items-center justify-center btn-devis'><Send />{t('contact.send')}</button>
-
-
+                        <button
+                            type="submit"
+                            className="btn-devis flex items-center justify-center gap-2"
+                        >
+                            <Send size={18} />
+                            {t("contact.send")}
+                        </button>
                     </form>
                     <form data-aos='slide-left' action="" className='bg-white rounded-xl shadow p-6 flex flex-col justify-between gap-5'>
                         <h2 className='text-blue'>{t('contact.cordone')}</h2>
@@ -180,8 +232,14 @@ export default function Contacts() {
                                 <span className='font-medium'>{t("contact.date1")}</span>
                             </div>
                         </div>
-
-                        <button type='submit' className='bg-green flex gap-2 justify-center items-center btn-devis'><a href={'https://wa.me/+237699949450'}><MessageCircle />{t('contact.whatsapp1')}</a></button>
+   <button
+                            type="submit"
+                            className="btn-devis bg-green flex items-center justify-center gap-2"
+                        >
+                            <MessageCircle size={18} />
+                            <a href={'https://wa.me/+237699949450'}>{t('contact.whatsapp1')}</a>
+                        </button>
+                      
 
                     </form>
                 </div>
