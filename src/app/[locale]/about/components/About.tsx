@@ -73,7 +73,7 @@ export default function About() {
                             <p className='md:text-[16px] text-[14px] text-gray'>{t('about.text2')}</p>
                             <div className='bg-blue p-5 rounded-2xl text-white flex flex-col gap-2'>
                                 <Quote className='w-10 text-violet' />
-                                <p className='italic font-medium text-[16px]'>" {t('about.word')} "</p>
+                                <p className='italic font-medium text-[16px]'>{t('about.word')}</p>
                                 <span className='font-semibold text-[14px] text-violet'>----{t('about.ceo')}</span>
 
                             </div>

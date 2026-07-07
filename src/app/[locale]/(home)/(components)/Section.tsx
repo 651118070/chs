@@ -623,6 +623,7 @@ export default function Section() {
           </div>
         </div>
       </section>
+      
 
       <section data-aos='slide-up' className='bg-blue'>
         <div className='grid gap-5 max-w-6xl mx-auto text-white place-items-center p-6'>
