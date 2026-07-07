@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Inter, Syne } from "next/font/google";
-
+import { Toaster } from "@/src/components/ui/sonner"
+ 
 import "@/src/app/globals.css";
 import Footer from "@/src/components/Footer";
 import { I18nProviderClient } from "@/src/locales/client";
@@ -35,6 +36,7 @@ export default async function RootLayout({
           {children}
           <Footer />
         </I18nProviderClient>
+          <Toaster />
       </body>
     </html>
   );

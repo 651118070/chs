@@ -1,15 +1,15 @@
 "use client"
 import { useI18n } from '@/src/locales/client';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import AOS from 'aos';
+import { toast } from "sonner"
 import 'aos/dist/aos.css';
 import { FileText, MessageCircle, Send } from 'lucide-react';
 import location from "@/public/assets/location.png";
 import phone from "@/public/assets/phone.png";
 import mail from "@/public/assets/message.png";
 import clock from "@/public/assets/clock.png";
-// import emailjs from "@emailjs/browser";
-// import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Image from 'next/image';
 export default function Contacts() {
     useEffect(() => {
@@ -19,8 +19,35 @@ export default function Contacts() {
         });
     }, []);
     const t = useI18n();
+    const form = useRef<HTMLFormElement>(null);
 
-    
+    const sendEmail = async (
+        e: React.FormEvent<HTMLFormElement>
+    ): Promise<void> => {
+        e.preventDefault();
+
+        if (!form.current) return;
+
+        try {
+            await emailjs.sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                form.current!,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+            );
+
+            toast("Message envoye avec succes", {
+                duration: 3000,
+            });
+            form.current.reset();
+        } catch (error) {
+            console.error("EmailJS Error:", error);
+            toast("Erreur lors de l'envoi du message", {
+                duration: 3000,
+            });
+        }
+    };
+
     return (
         <main className='bg-blue20'>
             <section data-aos='slide-up' className='grid max-w-6xl mx-auto gap-5 p-6 mt-20'>
@@ -30,7 +57,7 @@ export default function Contacts() {
                     </p>
                 </div>
                 <div className='grid md:grid-cols-2 gap-5'>
-                    <form data-aos='slide-right' action="" className='bg-white rounded-xl shadow p-6 flex flex-col gap-5'>
+                    <form ref={form} onSubmit={sendEmail} data-aos='slide-right' action="" className='bg-white rounded-xl shadow p-6 flex flex-col gap-5'>
                         <div className='flex gap-2 items-center'>
                             <FileText className='text-violet' />
                             <h2 className='text-blue'>{t('contact.devis')}</h2>
