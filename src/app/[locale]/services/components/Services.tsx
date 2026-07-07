@@ -33,7 +33,7 @@ export default function Services() {
     <main>
       <section  data-aos='slide-up' className='bg-blue20 mt-20'>
         <div className='flex items-center justify-center md:gap-5 gap-3 flex-col max-w-6xl mx-auto p-6'>
-          <h1 className='text-white'>{t('service.header')}-<span className='text-violet font-header md:text-5xl text-2xl font-extrabold leading-12 '>{t('service.span')}</span></h1>
+          <h1 className='text-blue'>{t('service.header')}-<span className='text-violet font-header md:text-5xl text-2xl font-extrabold leading-12 '>{t('service.span')}</span></h1>
           <p className='md:text-[18px] text-center'>{t('service.text')}
           </p>
         </div>

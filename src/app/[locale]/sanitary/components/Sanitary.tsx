@@ -45,7 +45,7 @@ export default function Sanitary() {
       <section data-aos='slide-up' className='bg-blue20 mt-20'>
         <div className='max-w-6xl mx-auto gap-5 p-6'>
           <div className="flex flex-col gap-5 justify-center max-md:items-center">
-            <h1 className='text-white text-center  text-2xl'>{t("netoyage.sanitaire")}-</h1>
+            <h1 className='text-blue text-center font-header md:text-5xl  font-extrabold leading-12  text-2xl'>{t("netoyage.sanitaire")}</h1>
 
             <p className="md:text-[18px] max-md:text-center">{t("netoyage.ntext")}</p>
             <div className="flex gap-5 p-6 max-md:flex-col">

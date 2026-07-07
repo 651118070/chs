@@ -49,7 +49,7 @@ export default function Contacts() {
         <main className='bg-blue20'>
             <section data-aos='slide-up' className='grid max-w-6xl mx-auto gap-5 p-6 mt-20'>
                 <div className='flex items-center gap-5 flex-col'>
-                    <h1 className='text-white text-nowrap'>{t('contact.header')}-<span className='text-violet font-header md:text-5xl text-2xl font-extrabold leading-12 '>{t('contact.us')}</span></h1>
+                    <h1 className='text-blue text-nowrap'>{t('contact.header')}-<span className='text-violet font-header md:text-5xl text-2xl font-extrabold leading-12 '>{t('contact.us')}</span></h1>
                     <p data-aos='zoom-in' className='md:text-[18px] '>{t('contact.text')}
                     </p>
                 </div>
